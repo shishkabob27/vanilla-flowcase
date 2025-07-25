@@ -13,7 +13,7 @@ WORKDIR $HOME
 RUN wget https://github.com/vanilla-wiiu/vanilla/releases/download/continuous/vanilla-linux-x86_64.tar.gz \
 	&& tar -xzf vanilla-linux-x86_64.tar.gz \
 	&& rm vanilla-linux-x86_64.tar.gz \
-	&& chmod +x bin/vanilla-pi
+	&& chmod +x bin/vanilla
 
 RUN echo "/usr/bin/desktop_ready && bin/vanilla &" > $STARTUPDIR/custom_startup.sh
 RUN chmod 755 $STARTUPDIR/custom_startup.sh
