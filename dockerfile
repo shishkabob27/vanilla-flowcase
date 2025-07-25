@@ -15,7 +15,7 @@ RUN wget https://github.com/vanilla-wiiu/vanilla/releases/download/continuous/va
 	&& rm vanilla-linux-x86_64.tar.gz \
 	&& chmod +x bin/vanilla-pi
 
-RUN echo "/usr/bin/desktop_ready && bin/vanilla-pi &" > $STARTUPDIR/custom_startup.sh
+RUN echo "/usr/bin/desktop_ready && bin/vanilla &" > $STARTUPDIR/custom_startup.sh
 RUN chmod 755 $STARTUPDIR/custom_startup.sh
 
 # Update the desktop environment to be optimized for a single application
